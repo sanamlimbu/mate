@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repositories\" />
+    <None Remove="Features\" />
+    <None Remove="Features\UserFeatures\" />
+    <None Remove="Features\UserFeatures\CreateUser\" />
+    <None Remove="Features\UserFeatures\GetAllUser\" />
+    <None Remove="Features\PostFeatures\" />
+    <None Remove="Features\PostFeatures\CreatePost\" />
+    <None Remove="Common\" />
+    <None Remove="Common\Exceptions\" />
+    <None Remove="Common\Behaviors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+    <Folder Include="Features\" />
+    <Folder Include="Features\UserFeatures\" />
+    <Folder Include="Features\UserFeatures\CreateUser\" />
+    <Folder Include="Features\UserFeatures\GetAllUser\" />
+    <Folder Include="Features\PostFeatures\" />
+    <Folder Include="Features\PostFeatures\CreatePost\" />
+    <Folder Include="Common\" />
+    <Folder Include="Common\Exceptions\" />
+    <Folder Include="Common\Behaviors\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Mate.Domain\Mate.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+  </ItemGroup>
+</Project>
